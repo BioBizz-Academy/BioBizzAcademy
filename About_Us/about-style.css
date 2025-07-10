@@ -1,0 +1,318 @@
+/* Global Styles */
+body {
+    font-family: Alta;
+    background: linear-gradient(135deg, #fbdeac 25%, #335B67 50%, #ffffff 75%);
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container for Content */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left and Right Content Sections */
+.left-content, .right-content {
+    flex: 1;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.right-content {
+    text-align: center;
+}
+
+/* Image Styling */
+.image-responsive {
+    max-width: 300px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #1c5566;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+/* Navbar Layout and Styles */
+.navbar {
+    background-color: #335B67;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin-left: 20px;
+}
+
+.navbar-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu button {
+    background-color: #2b5562;
+    border: 1px;
+    padding: 5;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu button:hover {
+    color: #f0f0f0;
+}
+
+/* Mobile Hamburger Menu Styling */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #335B67;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+h2.moontime {
+    font-family: Moontime;
+    margin-bottom: 10px;
+}
+
+h3.alta {
+    font-family: Alta;
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: #D0B9A4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container_about {
+    display: flex; /* Use flexbox for easier layout */
+    justify-content: space-between; /* Space columns evenly */
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1; /* Make each column equally flexible */
+    padding: 20px; /* Add some padding for readability */
+  }
+  
+  /* Optional: Add media query for responsiveness */
+  @media (max-width: 768px) { 
+    .container_about {
+      flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+}
+
+/* Container for Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+/* Card Styles */
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 2rem;
+    width: calc(50% - 1rem); /* 2 cards per row with gap */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e6c9ff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.card .circle img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.card .bio-text {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.card .social-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card .social-icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.card .social-icon:hover {
+    background-color: #E68866;
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Ensure items are aligned at the bottom */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25px; /* Added padding on both ends (left and right) */
+}
+
+.footer-left h2 {
+    font-family: Alta;
+    padding-left: 0px;
+    margin-bottom: 10px; /* Optional: space between heading and bottom */
+}
+
+.footer-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 25px 25px;
+    margin: 0;
+    align-items: flex-end; /* Align images at the bottom */
+}
+
+.footer-right ul li a img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image fits well without distortion */
+}
